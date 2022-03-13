@@ -10,15 +10,10 @@ module.exports = {
         if (oresult != null) {
             const mid = message.guild.id;
             const serverxp = oresult["serverxp"];
-            console.log(serverxp);
             const iguild = serverxp.map(function(e) { return e.sid; }).indexOf(message.guild.id);
-            console.log(iguild);
             const oguild = serverxp[iguild];
-            console.log(oguild);
             const oxp = oguild["xp"];
-            console.log(oxp);
             const nxp = oxp + 1;
-            console.log(nxp);
             const nsxp = serverxp.pop(iguild);
             const noserverxp = {sid: message.guild.id, xp: nxp};
             const nssxp = serverxp.push(noserverxp);
